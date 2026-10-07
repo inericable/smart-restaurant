@@ -1,0 +1,202 @@
+.orders-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+  padding: 45px 7%;
+  box-sizing: border-box;
+}
+
+.orders-header {
+  margin-bottom: 30px;
+}
+
+.orders-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #222;
+}
+
+.orders-header p {
+  color: #777;
+  margin-top: 8px;
+}
+
+.order-card {
+  max-width: 850px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.order-label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.order-card-header h2 {
+  margin: 5px 0 0;
+  color: #222;
+  font-size: 20px;
+}
+
+.order-status {
+  background: #e8f8ee;
+  color: #20a35a;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.order-date {
+  color: #888;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.order-divider {
+  height: 1px;
+  background: #eee;
+  margin: 25px 0;
+}
+
+.order-card h3 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+}
+
+.order-item div {
+  display: flex;
+  gap: 8px;
+}
+
+.order-item span {
+  color: #888;
+}
+
+.order-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.order-info span {
+  font-size: 13px;
+  color: #888;
+  font-weight: 600;
+}
+
+.order-info p {
+  margin-top: 8px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.order-total strong {
+  color: #e85d04;
+}
+
+.continue-shopping {
+  margin-top: 25px;
+  padding: 12px 22px;
+  border: 1px solid #e85d04;
+  border-radius: 8px;
+  background: white;
+  color: #e85d04;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.continue-shopping:hover {
+  background: #fff3eb;
+}
+
+.no-orders {
+  max-width: 550px;
+  margin: 80px auto;
+  background: white;
+  padding: 50px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+.no-orders-icon {
+  font-size: 55px;
+}
+
+.no-orders h1 {
+  color: #222;
+}
+
+.no-orders p {
+  color: #777;
+  line-height: 1.6;
+}
+
+.no-orders button {
+  margin-top: 15px;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #e85d04;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.no-orders button:hover {
+  background: #d94f00;
+}
+
+@media (max-width: 650px) {
+  .orders-page {
+    padding: 30px 5%;
+  }
+
+  .order-card {
+    padding: 22px;
+  }
+
+  .order-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .order-info {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

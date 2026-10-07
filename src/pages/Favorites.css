@@ -1,0 +1,168 @@
+.favorites-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+  padding: 45px 7%;
+  box-sizing: border-box;
+}
+
+.favorites-header {
+  margin-bottom: 30px;
+}
+
+.favorites-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #222;
+}
+
+.favorites-header p:last-child {
+  color: #777;
+  margin-top: 8px;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
+  gap: 25px;
+}
+
+.favorite-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-4px);
+}
+
+.favorite-image {
+  height: 210px;
+  position: relative;
+}
+
+.favorite-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-favorite {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #e85d04;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.remove-favorite:hover {
+  background: #e85d04;
+  color: white;
+}
+
+.favorite-content {
+  padding: 22px;
+}
+
+.favorite-content h2 {
+  margin: 0 0 8px;
+  color: #222;
+  font-size: 21px;
+}
+
+.favorite-cuisine {
+  margin: 0 0 15px;
+  color: #777;
+}
+
+.favorite-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.favorite-meta span {
+  padding: 6px 9px;
+  background: #f6f6f6;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+.view-favorite {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #e85d04;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-favorite:hover {
+  background: #d94f00;
+}
+
+.empty-favorites {
+  max-width: 550px;
+  margin: 80px auto;
+  padding: 50px;
+  background: white;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+.empty-heart {
+  font-size: 65px;
+  color: #e85d04;
+}
+
+.empty-favorites h1 {
+  color: #222;
+}
+
+.empty-favorites p {
+  color: #777;
+  line-height: 1.6;
+}
+
+.empty-favorites button {
+  margin-top: 15px;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #e85d04;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.empty-favorites button:hover {
+  background: #d94f00;
+}
+
+@media (max-width: 600px) {
+  .favorites-page {
+    padding: 30px 5%;
+  }
+
+  .empty-favorites {
+    padding: 35px 20px;
+  }
+}  

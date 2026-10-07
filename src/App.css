@@ -1,0 +1,668 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 75px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #222222;
+  white-space: nowrap;
+}
+
+.logo span:last-child {
+  color: #e85d04;
+}
+
+.logo span:first-child {
+  margin-right: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444444;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #e85d04;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 10px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.login-btn {
+  border: 1px solid #dddddd;
+  background: white;
+  color: #333333;
+}
+
+.login-btn:hover {
+  border-color: #e85d04;
+  color: #e85d04;
+}
+
+.signup-btn {
+  border: none;
+  background: #e85d04;
+  color: white;
+}
+
+.signup-btn:hover {
+  background: #c94e03;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1600&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+.hero-content {
+  width: 850px;
+  max-width: 90%;
+  padding: 40px 20px;
+}
+
+.hero-tag {
+  color: #ff9f43;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #ff7b00;
+}
+
+.hero-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #eeeeee;
+  max-width: 650px;
+  margin: auto;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box {
+  background: white;
+  color: #222222;
+  margin-top: 35px;
+  padding: 10px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+
+  text-align: left;
+}
+
+.search-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  min-width: 145px;
+}
+
+.search-location span {
+  font-size: 22px;
+}
+
+.search-location small {
+  color: #888888;
+  font-size: 11px;
+}
+
+.search-location p {
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.search-divider {
+  height: 40px;
+  width: 1px;
+  background: #dddddd;
+}
+
+.search-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.search-input span {
+  font-size: 18px;
+}
+
+.search-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333333;
+}
+
+.search-input input::placeholder {
+  color: #999999;
+}
+
+.search-btn {
+  border: none;
+  background: #e85d04;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.search-btn:hover {
+  background: #c94e03;
+}
+
+/* ================= COMMON SECTIONS ================= */
+
+.categories,
+.restaurants {
+  padding: 70px 7%;
+}
+
+.section-label {
+  color: #e85d04;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.section-heading h2,
+.restaurant-header h2 {
+  font-size: 32px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.category-card {
+  background: white;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: #e85d04;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.category-icon {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.category-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.category-card p {
+  color: #888888;
+  font-size: 12px;
+}
+
+/* ================= RESTAURANTS ================= */
+
+.restaurants {
+  background: #f5f5f5;
+}
+
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.sub-heading {
+  color: #777777;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.view-all {
+  background: transparent;
+  border: none;
+  color: #e85d04;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.restaurant-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  transition: 0.3s;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-image {
+  height: 220px;
+  position: relative;
+}
+
+.restaurant-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.veg-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: white;
+  color: green;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.heart {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+
+  border: none;
+  background: white;
+  border-radius: 50%;
+
+  width: 35px;
+  height: 35px;
+
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.restaurant-info {
+  padding: 18px;
+}
+
+.restaurant-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.restaurant-title h3 {
+  font-size: 19px;
+}
+
+.rating {
+  background: #16803c;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cuisine {
+  color: #777777;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.restaurant-details {
+  display: flex;
+  justify-content: space-between;
+  color: #777777;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.menu-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 11px;
+
+  background: #fff4eb;
+  color: #e85d04;
+
+  border: 1px solid #ffd8bd;
+  border-radius: 7px;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  background: #e85d04;
+  color: white;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+  padding: 55px 7%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+
+  background: white;
+}
+
+.feature {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.feature-icon {
+  min-width: 50px;
+  height: 50px;
+
+  border-radius: 10px;
+  background: #fff1e6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+}
+
+.feature h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.feature p {
+  font-size: 12px;
+  color: #777777;
+  line-height: 1.5;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #181818;
+  color: white;
+  padding: 45px 7%;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.footer-logo span {
+  color: #e85d04;
+}
+
+footer > p {
+  color: #aaaaaa;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 25px 0;
+}
+
+.footer-links a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  color: #e85d04;
+}
+
+.copyright {
+  border-top: 1px solid #333333;
+  padding-top: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .nav-actions {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-location,
+  .search-input {
+    width: 100%;
+  }
+
+  .search-divider {
+    display: none;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+.login-btn,
+.signup-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+.welcome-user {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid #e85d04;
+  background: white;
+  color: #e85d04;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #e85d04;
+  color: white;
+}
+/* LOGOUT BUTTON */
+
+.logout-btn {
+  padding: 10px 20px;
+  border: 1px solid #e85d04;
+  border-radius: 7px;
+  background: white;
+  color: #e85d04;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #e85d04;
+  color: white;
+}
+
+.welcome-user {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  display: flex;
+  align-items: center;
+}

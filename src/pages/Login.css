@@ -1,0 +1,157 @@
+.auth-page {
+  min-height: calc(100vh - 75px);
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1600&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 20px;
+}
+
+.auth-card {
+  width: 430px;
+  max-width: 100%;
+
+  background: white;
+  border-radius: 15px;
+
+  padding: 35px;
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.auth-logo {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.auth-logo span {
+  color: #e85d04;
+}
+
+.auth-card h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.auth-card form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 15px 0 7px;
+}
+
+.auth-card form input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 12px;
+
+  border: 1px solid #ddd;
+  border-radius: 7px;
+
+  font-size: 13px;
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.auth-card form input:focus {
+  border-color: #e85d04;
+}
+
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 15px 0;
+  font-size: 11px;
+}
+
+.remember {
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
+  margin: 0 !important;
+  font-weight: 400 !important;
+}
+
+.remember input {
+  accent-color: #e85d04;
+}
+
+.auth-options a {
+  color: #e85d04;
+  text-decoration: none;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 13px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #e85d04;
+  color: white;
+
+  font-weight: 700;
+  font-size: 14px;
+
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-submit:hover {
+  background: #c94e03;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 25px 0;
+
+  color: #aaa;
+  font-size: 11px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.account-text {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+}
+
+.account-text a {
+  color: #e85d04;
+  font-weight: 700;
+  text-decoration: none;
+}

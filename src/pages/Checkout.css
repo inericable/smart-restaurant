@@ -1,0 +1,132 @@
+.checkout-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+  padding: 40px 7%;
+}
+
+.checkout-header {
+  margin-bottom: 30px;
+}
+
+.checkout-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #222;
+}
+
+.checkout-header p {
+  color: #777;
+  margin-top: 8px;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 30px;
+  align-items: start;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkout-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.checkout-section textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 14px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.checkout-section textarea:focus {
+  outline: none;
+  border-color: #e85d04;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.payment-option:hover {
+  border-color: #e85d04;
+}
+
+.checkout-summary {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-summary h2 {
+  margin-top: 0;
+}
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 15px 0;
+  color: #444;
+}
+
+.summary-row,
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+}
+
+.summary-total {
+  font-size: 20px;
+  color: #222;
+}
+
+.place-order-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #e85d04;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.place-order-btn:hover {
+  background: #d94f00;
+}
+
+@media (max-width: 800px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+}
